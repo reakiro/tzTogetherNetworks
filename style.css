@@ -1,0 +1,49 @@
+#gameField {
+  width: 400px;
+  height: 400px;
+  border: solid;
+  border-color: black;
+}
+
+.divRow {
+  height: 20%;
+}
+
+.divSquare {
+  border: 1px solid black;
+}
+#instruments,
+#fieldArea {
+  padding: 15px;
+}
+
+.jumbotron {
+  background: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+#name {
+  width: 300px;
+  height: 25px;
+  display: inline-block;
+}
+
+#startGame,
+#pauseResume,
+a {
+  width: 100px;
+  margin: 5%;
+}
+
+h2 {
+  margin: 10%;
+}
