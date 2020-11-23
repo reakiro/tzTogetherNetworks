@@ -1,40 +1,35 @@
 var interval = 0;
-var timeout = 0;
 
 var isTimerWorking = true;
 var canResume = true;
 
 function resetPause() {
-    canResume = true;
-    isTimerWorking = true;
+  canResume = true;
+  isTimerWorking = true;
 }
 
 function resetTimer() {
-    if (interval) clearInterval(interval);
+  if (interval) clearInterval(interval);
 }
 
 function startTimer(duration) {
-    var timer = duration, minutes, seconds;
-    interval = setInterval(function () {
-        if (canResume) {
-            isTimerWorking = true;
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+  var timer = duration,
+    minutes, seconds;
+  interval = setInterval(function() {
+    if (canResume) {
+      isTimerWorking = true;
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
 
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
 
-            $('#counterTime').text(`${minutes}:${seconds}`);
+      $('#counterTime').text(`${minutes}:${seconds}`);
 
-            if (--timer < 0) {
-                timer = duration;
-            }
+      if (--timer < 0) timer = duration;
+      duration--;
+      if (duration < 0) endGame();
 
-            duration--;
-
-            if (duration < 0) {
-                endGame();
-            }
-        } else isTimerWorking = false;  
-    }, 1000);
+    } else isTimerWorking = false;
+  }, 1000);
 }

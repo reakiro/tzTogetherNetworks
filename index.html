@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="container-fluid">
-		<div class="row bg-light">
-			<div class="col-sm-8">
-				<button type="button" id="startGame" class="btn btn-outline-dark">new game</button>
-				<button type="button" id="pauseResume" class="btn btn-outline-dark" disabled>pause</button>
-				<a class="btn btn-outline-info" id="counterTime">00:00</a>
-				<a class="btn btn-outline-info" >count: <span id="counterScore">0</span></a>
-			</div>
-			<div class="col-sm-4">
-				<h2>remove the cubes</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-8" id="fieldArea" >
-				<div id="gameField" class="bg-white container"></div>
-			</div>
-			<div id="resultsTable" class="col-sm-2">
-				<h4>Results</h4>
-					<table class="table">
-					<thead><tr><th>name</th><th>score</th></tr></thead>
-					<tbody></tbody>
-				  </table>
-			</div>
-		</div>
-	</div>
-  	<div class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">your score: <span id="score"></span></h5>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body">
-					<p class="text-center"><input id="name" type="text" class="form-control" placeholder="your name"></p>
-					<p class="text-center"><button id="saveResults" class="btn btn-sm btn-outline-primary">save result</button></p>
-				</div>
-			</div>	
-		</div>
-	</div>
-	<script src="dependencies.js"></script>
-</body>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row bg-light">
+                <div class="col-sm-8">
+                    <button type="button" id="startGame" class="btn btn-outline-dark">new game</button>
+                    <button type="button" id="pauseResume" class="btn btn-outline-dark" disabled>pause</button>
+                    <a class="btn btn-outline-info" id="counterTime">00:00</a>
+                    <a class="btn btn-outline-info">count: <span id="counterScore">0</span></a>
+                </div>
+                <div class="col-sm-4">
+                    <h2>remove the cubes</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" id="fieldArea">
+                    <div id="gameField" class="bg-white container"></div>
+                </div>
+                <div id="resultsTable" class="col-sm-2">
+                    <h4>Results</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">your score: <span id="score"></span></h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center"><input id="name" type="text" class="form-control" placeholder="your name" /></p>
+                        <p class="text-center"><button id="saveResults" class="btn btn-sm btn-outline-primary">save result</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="dependencies.js"></script>
+    </body>
 </html>

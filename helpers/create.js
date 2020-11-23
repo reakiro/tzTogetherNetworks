@@ -27,14 +27,6 @@ function createTableCell(className, text) {
 }
 
 function createTableRow(result) {
-  console.log('bebe' + result)
   return $('<tr/>')
     .append([createTableCell('name', result.name), createTableCell('score', result.score)]);
-}
-
-function updateTable(results) {
-  console.log('res' + results)
-  for (var i = 0; i < results.length; i++) {
-    $('tbody').append(createTableRow(results[i]));
-  }
 }

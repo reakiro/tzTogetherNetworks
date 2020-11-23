@@ -11,20 +11,22 @@ function livenSquare(id) {
 }
 
 function quantity() {
-    switch (deadIds.length) {
-        case 0: case 1: case 2:
-            return randomNumber(deadIds.length);
-        default:
-            return randomNumber(2);   
-    }    
+  switch (deadIds.length) {
+    case 0:
+    case 1:
+    case 2:
+      return randomNumber(deadIds.length);
+    default:
+      return randomNumber(2);
+  }
 }
 
 function addSquare(quantity) {
-    for (var i = 0; i < quantity; i++) {
-        var id = randomId(deadIds);
-        livenSquare(id);
-        deadIds.splice($.inArray(id, deadIds), 1);
-    }  
+  for (var i = 0; i < quantity; i++) {
+    var id = randomId(deadIds);
+    livenSquare(id);
+    deadIds.splice($.inArray(id, deadIds), 1);
+  }
 }
 
 function logSquare(target) {
